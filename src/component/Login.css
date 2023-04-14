@@ -1,0 +1,44 @@
+.password-form {
+    margin: auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .password-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .password-form form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .password-form input[type="email"],
+  .password-form input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+  }
+
+  .password-form input[type="email"]:focus,
+  .password-form input[type="password"]:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .password-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
