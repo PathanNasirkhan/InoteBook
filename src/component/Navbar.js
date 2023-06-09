@@ -1,7 +1,12 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import './Navbar.css'
 function Navbar() {
-
+  const navigate = useNavigate();
+  const handlelogout = () =>{
+   localStorage.removeItem('token');
+   navigate('/login');
+  }
   let location = useLocation();
 
   return (
@@ -21,10 +26,10 @@ function Navbar() {
           <Link className={`nav-link ${location.pathname==="/about" ? "active" : ""}`} to="/about">About</Link>
         </li>
       </ul>
-      <form className="d-flex">
+     {!localStorage.getItem('token')? <form className="d-flex">
         <Link className="btn btn-primary mx-1" to="/login" type="submit">Login</Link>
         <Link className="btn btn-primary mx-1" to="/singup" type="submit">Signup</Link>
-      </form>
+      </form>: <button onClick={handlelogout} className="btn btn-primary mx-1">Logout</button>}
     </div>
   </div>
 </nav>

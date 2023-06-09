@@ -12,11 +12,10 @@ const Noteschema = new mongoose.Schema({
     description : {
         type:String,
         required:true,
-        unique:true
     },
     tag : {
         type:String,
-        default:"General"
+        
     },
     date : {
         type:Date,

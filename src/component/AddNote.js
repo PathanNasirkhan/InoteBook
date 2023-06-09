@@ -1,6 +1,5 @@
 import React ,{useContext, useState} from 'react'
 import notecontext from '../context/notes/notecontext'
-import Notes from './Notes';
 function AddNote() {
     const context = useContext(notecontext);
     const {addNote} = context;
@@ -15,10 +14,10 @@ function AddNote() {
         setNote({...note,[e.target.name]:e.target.value});
     }
   return (
-    <div className='container my-3'>
+    <div className='container my-3 '>
     <h2>Add Note</h2>
     <form className='my-3'>
-  <div className="mb-3">
+    <div className="mb-3">
     <label htmlFor="title" className="form-label">Title</label>
     <input type="text" className="form-control" id="title" name='title'  onChange={onChange} minLength={5}  value={note.title} required/>
   </div>
